@@ -525,11 +525,7 @@ body{
 .content .text-content{
   width: 80%;
   height: 100%;
-<<<<<<< HEAD
   transition: all 0.45s ease-in-out .5s;
-=======
-  transition: all 0.45s ease-in-out;
->>>>>>> 1f0b6064df9bb0368bbe426ac74d108f498da82f
 }
 
 .content .text{
@@ -727,7 +723,6 @@ body{
     color: rgb(196, 196, 196);
     font-size: 13px;
 }
-<<<<<<< HEAD
 
 @media only screen and (max-width: 576px) {
     #navbar1{
@@ -1177,5 +1172,3 @@ body{
         gap: 30px;
     }
 }
-=======
->>>>>>> 1f0b6064df9bb0368bbe426ac74d108f498da82f
