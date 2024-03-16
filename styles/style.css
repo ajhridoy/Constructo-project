@@ -51,12 +51,23 @@ body{
 /* nav-2 styles */
 #navbar2{
     padding: 30px 0;
-    /* position: fixed;
-    background-color: white;
-    z-index: 1;
-    width: 100%;
-    top: 0; */
+    position: sticky;
+    position: -webkit-sticky;
+    /* background-color: white; */
+    /* z-index: 100000; */
+    /* width: 100%; */
+    top: 0;
+    /* height: 100%; */
 }
+/* #navbar1,
+.main-nav-scrolled {
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  z-index: 100000000;
+  top: 0;
+} */
+
 #second-nav{
     width: 85%;
     margin: 0 auto;
@@ -85,6 +96,55 @@ body{
 #nav-menu ul li a:hover{
     color: rgb(213, 73, 0);
 }
+
+#phone-display{
+    display: none;
+}
+#phn-nav-img{
+    width: 140px;
+}
+#phone-display{
+    background: white;
+    height: 80px;
+    width: 100%;
+  }
+  label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 20px 40px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  #phone-display ul{
+    float: right;
+    margin-right: 20px;
+  }
+  #phone-display ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  #phone-display ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  .checkbtn{
+    font-size: 30px;
+    color: black;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
 
 /* header body style */
 .swiper {
@@ -465,10 +525,12 @@ body{
 .content .text-content{
   width: 80%;
   height: 100%;
+  transition: all 0.45s ease-in-out .5s;
 }
 
 .content .text{
   display: none;
+  transition: all 0.45s ease-in-out .5s;
 }
 
 .content .text .title{
@@ -497,6 +559,7 @@ body{
 
 .content .text-content .construction{
   display: block;
+  transition: all 0.45s ease-in-out .5s;
 }
 
 #construction:checked ~ .text-content .construction,
@@ -506,6 +569,7 @@ body{
 #architecture:checked ~ .text-content .architecture,
 #planning:checked ~ .text-content .planning{
   display: block;
+  transition: all 0.45s ease-in-out .5s;
 }
 
 #renovations:checked ~ .text-content .construction,
@@ -514,6 +578,7 @@ body{
 #architecture:checked ~ .text-content .construction,
 #planning:checked ~ .text-content .construction{
   display: none;
+  transition: all 0.45s ease-in-out .5s;
 }
 #consulting h1{
     font-size: 18px;
@@ -525,7 +590,6 @@ body{
     line-height: 1.8;
     color: rgb(114, 114, 114);
 }
-
 /* buy-sec-styles */
 #buy-sec{
     padding: 100px 0;
@@ -658,4 +722,453 @@ body{
     text-align: center;
     color: rgb(196, 196, 196);
     font-size: 13px;
+}
+
+@media only screen and (max-width: 576px) {
+    #navbar1{
+        display: none;
+    }
+
+    #navbar2{
+        display: none;
+    }
+    #phone-display{
+        display: block;
+        overflow: hidden;
+    }
+    .checkbtn{
+        display: block;
+        /* position: fixed; */
+      }
+      #mobile-menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: black;
+        opacity: 1;
+        top: 80px;
+        right: -100%;
+        text-align: left;
+        transition: all .5s;
+        z-index: 30;
+      }
+      #phone-display ul {
+        float: right;
+        margin-right: 0px;
+    }
+      #phone-display ul li{
+        display: block;
+        /* margin: 25px 0; */
+        padding: 15px 0;
+        border-bottom: 1px solid rgb(55, 55, 55);
+        width: 80%;
+        line-height: 30px;
+      }
+      #phone-display ul li a{
+        font-size: 16px;
+        font-weight: 500;
+
+      }
+      a:hover,a.active{
+        color: var(--primary-color);
+      }
+      #check:checked ~ ul{
+        right: 0;
+      }
+
+      /* header */
+      #head-sec:hover .swiper-button-next::after{
+        display: none;
+    }
+    #head-sec:hover .swiper-button-prev:after{
+        display: none;
+    }
+    #dream-div{
+        background-position: center top;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+    }
+    #dream-div2{
+        background-position: center top;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+    }
+    #dream-div3{
+        height: 50vh;
+        display: flex;
+        align-items: center;
+    }
+    .caption{
+        width: 100%;
+        margin-right: 0;
+        color: white;
+    }
+    .cap-property{
+        width: 85%;
+        margin: 0 auto;
+    }
+    .sm-head{
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+    .dream-head{
+        font-size: 30px;
+    }
+    .head-desc{
+        font-size: 14px;
+    }
+    .head-desc br{
+        display: none;
+    }
+    .dream-btn-1{
+        padding: 10px 30px;
+        margin-top: 20px;
+        border: none;
+        background-color: #d54900;
+        font-size: 12px;
+        display: inline;
+    }
+    /* .dream-btn-1:hover{
+        background-color: black; 
+        cursor: pointer; 
+    } */
+    .dream-btn-2{
+        padding: 10px 30px;
+        margin-left: 20px; 
+        border: 1px solid white;
+        font-size: 12px;
+        font-weight: 400;
+        color: white;
+        border-radius: 5px;
+        background-color: transparent;
+    }
+    #quote-sec{
+        height: 100%;
+        padding: 35px 25px 35px 15px;
+    }
+    #quote{
+        width: 100%;
+        display: block;
+    }
+    #quote-head{
+        font-size: 20px;
+    }
+    #quote-btn{
+        padding: 15px 25px;
+        font-size: 14px;
+    }
+
+    /* services */
+    #services{
+        width: 95%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .service-card{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .card-img img{
+        width: 100%;
+    }
+
+    #what-we-offer{
+        width: 95%;
+        display: block;
+    }
+    #offer-tab{
+        width: 100%;
+    }
+    #consulting{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .content{
+        display: block;
+      }
+      .content .list{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        position: relative;
+        width: 90%;
+        margin-right: 0px;
+        margin-bottom: 40px;
+      }
+      .content .list label{
+        text-align: left;
+        padding: 20px;
+        border-top: 1px solid rgb(236, 236, 236);
+        border-right: 1px solid rgb(236, 236, 236);
+        border-bottom: 1px solid rgb(236, 236, 236);
+        border-left: 1px solid rgb(236, 236, 236);
+        font-size: 14px;
+        font-weight: 500;
+        z-index: 10;
+      }
+
+
+    #trust-div{
+        width: 95%;
+    }
+    #trust-head{
+        width: 90%;
+        border-bottom: 1px solid rgb(229, 229, 229);
+        margin: 0 auto;
+        padding-bottom: 20px;
+        margin-bottom: 50px;
+    }
+    #trust-head h1{
+        font-size: 18px;
+        font-weight: 500;
+        text-align: center;
+    }
+    #clients-co{
+        display: block;
+        text-align: center;
+        border-top: 1px solid rgb(229, 229, 229);
+        border-bottom: 1px solid rgb(229, 229, 229);
+        padding: 30px;
+        margin-bottom: 20px;
+    }
+    .co-img{
+        margin-bottom: 30px;
+    }
+    #trust-div p{
+        padding: 0 15;
+        font-size: 20px;
+    }
+
+    #first-footer{
+        width: 95%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+}
+@media only screen and (min-width: 576px) and (max-width: 992px) {
+    #navbar1{
+        display: none;
+    }
+
+    #navbar2{
+        display: none;
+    }
+    #phone-display{
+        display: block;
+        overflow: hidden;
+    }
+    .checkbtn{
+        display: block;
+        /* position: fixed; */
+      }
+      #mobile-menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: black;
+        opacity: 1;
+        top: 80px;
+        right: -100%;
+        text-align: left;
+        transition: all .5s;
+        z-index: 30;
+      }
+      #phone-display ul {
+        float: right;
+        margin-right: 0px;
+    }
+      #phone-display ul li{
+        display: block;
+        /* margin: 25px 0; */
+        padding: 15px 0;
+        border-bottom: 1px solid rgb(55, 55, 55);
+        width: 80%;
+        line-height: 30px;
+      }
+      #phone-display ul li a{
+        font-size: 16px;
+        font-weight: 500;
+
+      }
+      a:hover,a.active{
+        color: var(--primary-color);
+      }
+      #check:checked ~ ul{
+        right: 0;
+      }
+
+      /* header */
+      #head-sec:hover .swiper-button-next::after{
+        display: none;
+    }
+    #head-sec:hover .swiper-button-prev:after{
+        display: none;
+    }
+    #dream-div{
+        background-position: center top;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+    }
+    #dream-div2{
+        background-position: center top;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+    }
+    #dream-div3{
+        height: 50vh;
+        display: flex;
+        align-items: center;
+    }
+    .caption{
+        width: 100%;
+        margin-right: 0;
+        color: white;
+    }
+    .cap-property{
+        width: 85%;
+        margin: 0 auto;
+    }
+    .sm-head{
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+    .dream-head{
+        font-size: 30px;
+    }
+    .head-desc{
+        font-size: 14px;
+    }
+    .head-desc br{
+        display: none;
+    }
+    .dream-btn-1{
+        padding: 10px 30px;
+        margin-top: 20px;
+        border: none;
+        background-color: #d54900;
+        font-size: 12px;
+        display: inline;
+    }
+    /* .dream-btn-1:hover{
+        background-color: black; 
+        cursor: pointer; 
+    } */
+    .dream-btn-2{
+        padding: 10px 30px;
+        margin-left: 20px; 
+        border: 1px solid white;
+        font-size: 12px;
+        font-weight: 400;
+        color: white;
+        border-radius: 5px;
+        background-color: transparent;
+    }
+    #quote-sec{
+        height: 100%;
+        padding: 35px 25px 35px 15px;
+    }
+    #quote{
+        width: 100%;
+        display: block;
+    }
+    #quote-head{
+        font-size: 20px;
+    }
+    #quote-btn{
+        padding: 15px 25px;
+        font-size: 14px;
+    }
+
+    /* services */
+    #services{
+        width: 95%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .service-card{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .card-img img{
+        width: 100%;
+    }
+
+    #what-we-offer{
+        width: 95%;
+        display: block;
+    }
+    #offer-tab{
+        width: 100%;
+    }
+    #consulting{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .content{
+        display: block;
+      }
+      .content .list{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        position: relative;
+        width: 90%;
+        margin-right: 0px;
+        margin-bottom: 40px;
+      }
+      .content .list label{
+        text-align: left;
+        padding: 20px;
+        border-top: 1px solid rgb(236, 236, 236);
+        border-right: 1px solid rgb(236, 236, 236);
+        border-bottom: 1px solid rgb(236, 236, 236);
+        border-left: 1px solid rgb(236, 236, 236);
+        font-size: 14px;
+        font-weight: 500;
+        z-index: 10;
+      }
+
+
+    #trust-div{
+        width: 95%;
+    }
+    #trust-head{
+        width: 90%;
+        border-bottom: 1px solid rgb(229, 229, 229);
+        margin: 0 auto;
+        padding-bottom: 20px;
+        margin-bottom: 50px;
+    }
+    #trust-head h1{
+        font-size: 18px;
+        font-weight: 500;
+        text-align: center;
+    }
+    #clients-co{
+        display: block;
+        text-align: center;
+        border-top: 1px solid rgb(229, 229, 229);
+        border-bottom: 1px solid rgb(229, 229, 229);
+        padding: 30px;
+        margin-bottom: 20px;
+    }
+    .co-img{
+        margin-bottom: 30px;
+    }
+    #trust-div p{
+        padding: 0 15;
+        font-size: 20px;
+    }
+
+    #first-footer{
+        width: 95%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
 }

@@ -17,12 +17,22 @@ var swiper = new Swiper(".mySwiper", {
   });
 
   var swiper = new Swiper(".mySwiper2", {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 30,
     loop: true,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 1,
+        spaceBetween: 30,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
     },
     navigation: {
       nextEl: ".swiper-button-next",
