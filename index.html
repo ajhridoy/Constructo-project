@@ -13,7 +13,53 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
- <header>
+    <section id="phone-display">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo"><img id="phn-nav-img" src="images/constructo-logoV4.png" alt=""></label>
+        <ul id="mobile-menu">
+            <li class="">
+                <a href="#">HOME</a>
+                <ul class="mobile-dropdown">
+                    <li class="drop-list"><a href="#">CLASSIC DEMO</a></li>
+                    <li class="drop-list"><a href="#">LIMITLESS DEMO</a></li>
+                    <li class="drop-list"><a href="#">EXTRAVAGANT DEMO</a></li>
+                    <li class="drop-list"><a href="#">FULL SCREEN DEMO</a></li>
+                    <li class="drop-list"><a href="#">VERTICAL MENU DEMO</a></li>
+                    <li class="drop-list"><a href="#">ICONIC DEMO</a></li>
+                    <li class="drop-list"><a href="#">SIMPLE DEMO</a></li>
+                    <li class="drop-list"><a href="#">CRAFTSMAN DEMO</a></li>
+                </ul>
+            </li>
+            <li class="main-menu2 main-li">
+                <a href="#">PROJECTS</a>
+                <ul class="mobile-dropdown">
+                    <li class="drop-list"><a href="#">STANDARD VIEW</a></li>
+                    <li class="drop-list"><a href="#">CLASSIC VIEW</a></li>
+                    <li class="drop-list"><a href="#">RANDOM VIEW</a></li>
+                    <li class="drop-list"><a href="#">FULL WIDTH VIEW</a></li>
+                </ul>
+            </li>
+            <li class="main-menu3 main-li">
+                <a href="#">WHAT WE DO</a>
+                <ul class="mobile-dropdown">
+                    <li class="drop-list"><a href="#">CONSTRUCTION</a></li>
+                    <li class="drop-list"><a href="#">RENOVATIONS</a></li>
+                    <li class="drop-list"><a href="#">CONSULTING</a></li>
+                    <li class="drop-list"><a href="#">BIG PROJECTS</a></li>
+                    <li class="drop-list"><a href="#">ARCHITECTURE</a></li>
+                    <li class="drop-list"><a href="#">CONCRETE TRANSPORT</a></li>
+                </ul>
+            </li>
+            <li class="main-li"><a href="#">ABOUT US</a></li>
+            <li class="main-li"><a href="#">BLOG</a></li>
+            <li class="main-li"><a href="#">SHOP</a></li>
+            <li class="main-li"><a href="#">CONTACT US</a></li>
+            <li class="main-li"><a href="#">DARK DEMO</a></li>
+        </ul>
+      </section> 
     <nav>
         <section id="navbar1">
             <div id="first-nav">
@@ -46,55 +92,59 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <section id="navbar2">
-            <div id="second-nav">
-                <div>
-                    <img src="images/constructo-logoV4.png" alt="" srcset="">
-                </div>
-                <div id="nav-menu">
-                    <ul>
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">PROJECTS</a></li>
-                        <li><a href="#">WHAT WE DO</a></li>
-                        <li><a href="#">ABOUT US</a></li>
-                        <li><a href="#">BLOG</a></li>
-                        <li><a href="#">SHOP</a></li>
-                        <li><a href="#">CONTACT US</a></li>
-                        <li><a href="#">DARK DEMO</a></li>
-                        <li id="search-li"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section id="phone-display">
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-              <i class="fas fa-bars"></i>
-            </label>
-            <label class="logo"><img id="phn-nav-img" src="images/constructo-logoV4.png" alt=""></label>
-            <ul id="mobile-menu">
-              <li id="home-menu">
-                <a href="">HOME+</a>
-            </li>
-            <li>
-                <a href="">SERVICES</a>
-            </li>
-            <li>
-                <a href="">PORTFOLIO</a>
-            </li>
-            <li id="pages-menu">
-                <a href="">PAGES+</a>
-            </li>
-            <li>
-                <a href="">NEWS</a>
-            </li>
-            <li>
-                <a href="">CONTACT</a>
-            </li>
-            </ul>
-          </section>
+        </section>   
     </nav>
+    <section id="navbar2">
+        <div id="second-nav">
+            <div>
+                <img src="images/constructo-logoV4.png" alt="" srcset="">
+            </div>
+            <div id="nav-menu">
+                <ul id="nav-menu-ul">
+                    <li class="main-menu1 main-li">
+                        <a href="#">HOME</a>
+                        <ul class="dropdown-menu1">
+                            <li class="drop-list"><a href="#">CLASSIC DEMO</a></li>
+                            <li class="drop-list"><a href="#">LIMITLESS DEMO</a></li>
+                            <li class="drop-list"><a href="#">EXTRAVAGANT DEMO</a></li>
+                            <li class="drop-list"><a href="#">FULL SCREEN DEMO</a></li>
+                            <li class="drop-list"><a href="#">VERTICAL MENU DEMO</a></li>
+                            <li class="drop-list"><a href="#">ICONIC DEMO</a></li>
+                            <li class="drop-list"><a href="#">SIMPLE DEMO</a></li>
+                            <li class="drop-list"><a href="#">CRAFTSMAN DEMO</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-menu2 main-li">
+                        <a href="#">PROJECTS</a>
+                        <ul class="dropdown-menu2">
+                            <li class="drop-list"><a href="#">STANDARD VIEW</a></li>
+                            <li class="drop-list"><a href="#">CLASSIC VIEW</a></li>
+                            <li class="drop-list"><a href="#">RANDOM VIEW</a></li>
+                            <li class="drop-list"><a href="#">FULL WIDTH VIEW</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-menu3 main-li">
+                        <a href="#">WHAT WE DO</a>
+                        <ul class="dropdown-menu3">
+                            <li class="drop-list"><a href="#">CONSTRUCTION</a></li>
+                            <li class="drop-list"><a href="#">RENOVATIONS</a></li>
+                            <li class="drop-list"><a href="#">CONSULTING</a></li>
+                            <li class="drop-list"><a href="#">BIG PROJECTS</a></li>
+                            <li class="drop-list"><a href="#">ARCHITECTURE</a></li>
+                            <li class="drop-list"><a href="#">CONCRETE TRANSPORT</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-li"><a href="#">ABOUT US</a></li>
+                    <li class="main-li"><a href="#">BLOG</a></li>
+                    <li class="main-li"><a href="#">SHOP</a></li>
+                    <li class="main-li"><a href="#">CONTACT US</a></li>
+                    <li class="main-li"><a href="#">DARK DEMO</a></li>
+                    <li class="main-li" id="search-li"><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+ <header>
     <!-- header-body-sec -->
     <section id="head-sec">
         <div class="swiper mySwiper">

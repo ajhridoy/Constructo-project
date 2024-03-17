@@ -11,7 +11,7 @@ body{
 
 #navbar1{
     border-bottom: 1px solid rgb(236, 236, 236);
-    padding: 0 7%;
+    padding: 0 8%;
     font-size: 14px;
     color: rgb(193, 193, 193);
     background-color: rgb(249, 249, 249);
@@ -31,6 +31,10 @@ body{
 .fa-brands{
     margin-right:  20px;
 }
+.fa-brands:hover{
+    color: #d54900;
+    cursor: pointer;
+}
 #office-details{
     display: flex;
     gap: 20px;
@@ -45,28 +49,22 @@ body{
 .off-de{
     display: flex;
     gap: 15px;
-    padding: 20px 20px;
+    padding: 22px 20px;
     align-items: center;
+}
+.off-de:hover{
+    color: #d54900;
+    cursor: pointer;
 }
 /* nav-2 styles */
 #navbar2{
-    padding: 30px 0;
+    padding: 38px 0;
+    /* background-color: white;
     position: sticky;
-    position: -webkit-sticky;
-    /* background-color: white; */
-    /* z-index: 100000; */
-    /* width: 100%; */
     top: 0;
-    /* height: 100%; */
+    transition: 1s; */
+    z-index: 9999999999;
 }
-/* #navbar1,
-.main-nav-scrolled {
-  position: fixed;
-  width: 100%;
-  background-color: #fff;
-  z-index: 100000000;
-  top: 0;
-} */
 
 #second-nav{
     width: 85%;
@@ -75,12 +73,12 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-#nav-menu ul{
+#nav-menu #nav-menu-ul{
     display: flex;  
     gap: 20px; 
     font-size: 13px;
 }
-#nav-menu ul li{
+#nav-menu #nav-menu-ul .main-li{
     list-style: none;
     border-right: 1px solid rgb(242, 242, 242);
     padding: 10px 0;
@@ -88,17 +86,78 @@ body{
 #search-li{
     border-right: none !important;
 }
-#nav-menu ul li a{
+#nav-menu #nav-menu-ul .main-li a{
     text-decoration: none;
     margin-right:  20px;
     color: black;
 }
-#nav-menu ul li a:hover{
+#nav-menu #nav-menu-ul .main-li a:hover{
     color: rgb(213, 73, 0);
+}
+/* .main-menu{
+   position: relative;
+} */
+#nav-menu .main-menu1 .dropdown-menu1{
+    position: absolute;
+    background-color: white;
+    list-style: none;
+    padding: 15px;
+    left: 290px;
+    font-size: 12px;
+    box-shadow: 1px 2px 3px gray;
+    top: 67px;
+    display: none;
+}
+#nav-menu .main-menu2 .dropdown-menu2{
+    position: absolute;
+    background-color: white;
+    list-style: none;
+    padding: 15px;
+    left: 390px;
+    font-size: 12px;
+    box-shadow: 1px 2px 3px gray;
+    top: 67px;
+    display: none;
+}
+#nav-menu .main-menu3 .dropdown-menu3{
+    position: absolute;
+    background-color: white;
+    list-style: none;
+    padding: 15px;
+    left: 532px;
+    font-size: 12px;
+    box-shadow: 1px 2px 3px gray;
+    top: 67px;
+    display: none;
+}
+#nav-menu .main-menu1 .dropdown-menu1 .drop-list{
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+#nav-menu .main-menu2 .dropdown-menu2 .drop-list{
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+#nav-menu .main-menu3 .dropdown-menu3 .drop-list{
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+#nav-menu .main-menu1:hover .dropdown-menu1{
+    display: block;
+}
+#nav-menu .main-menu2:hover .dropdown-menu2{
+    display: block;
+}
+#nav-menu .main-menu3:hover .dropdown-menu3{
+    display: block;
 }
 
 #phone-display{
+    position: sticky;
+    top: 0;
+    background-color: #fff;
     display: none;
+    z-index: 99999999;
 }
 #phn-nav-img{
     width: 140px;
@@ -119,19 +178,19 @@ body{
   }
   #phone-display ul{
     float: right;
-    margin-right: 20px;
   }
   #phone-display ul li{
     display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
+
   }
   #phone-display ul li a{
     color: white;
     font-size: 17px;
-    padding: 7px 13px;
-    border-radius: 3px;
+
     text-transform: uppercase;
+  }
+  #phone-display ul li a:hover{
+    color: #d54900;
   }
   .checkbtn{
     font-size: 30px;
@@ -183,6 +242,12 @@ body{
     display: none;
     /* display: none; */
 }
+.swiper-button-prev{
+    top: 375px;
+}
+.swiper-button-next{
+    top: 375px;
+}
 #head-sec:hover .swiper-button-next::after{
     display: block;
 }
@@ -218,8 +283,8 @@ body{
     align-items: center;
 }
 .caption{
-    width: 50%;
-    margin-right: 50px;
+    width: 49%;
+    margin-left: 10px;
     color: white;
 }
 .cap-property{
@@ -280,7 +345,7 @@ body{
     /* background-repeat: no-repeat; */
     background-size: cover;
     background-position: center top;
-    height: 100px;
+    height: 115px;
 }
 #quote{
     width: 85%;
@@ -475,7 +540,7 @@ body{
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 20%;
+  width: 25%;
   margin-right: 50px;
 }
 
@@ -608,6 +673,7 @@ body{
     padding: 15px 30px;
     background-color: #292929;
     border: none;
+    color: #fff;
 }
 #buy-sec button:hover{
     background-color: #d54900;
@@ -622,7 +688,7 @@ body{
     margin: 0 auto;
 }
 #trust-head{
-    width: 40%;
+    width: 35%;
     border-bottom: 1px solid rgb(229, 229, 229);
     margin: 0 auto;
     padding-bottom: 20px;
@@ -638,7 +704,7 @@ body{
     justify-content: space-between;
     border-top: 1px solid rgb(229, 229, 229);
     border-bottom: 1px solid rgb(229, 229, 229);
-    padding: 30px;
+    padding: 28px;
     margin-bottom: 20px;
 }
 #trust-div p{
@@ -752,25 +818,24 @@ body{
         transition: all .5s;
         z-index: 30;
       }
-      #phone-display ul {
+    #phone-display ul {
         float: right;
         margin-right: 0px;
+        padding: 20px;
     }
       #phone-display ul li{
-        display: block;
-        /* margin: 25px 0; */
-        padding: 15px 0;
-        border-bottom: 1px solid rgb(55, 55, 55);
         width: 80%;
-        line-height: 30px;
+        margin-top: 5px;
       }
+     .mobile-dropdown li{
+     }
       #phone-display ul li a{
-        font-size: 16px;
+        font-size: 12px;
         font-weight: 500;
-
+        text-decoration: none;
       }
       a:hover,a.active{
-        color: var(--primary-color);
+        color: #d54900;
       }
       #check:checked ~ ul{
         right: 0;
@@ -788,17 +853,20 @@ body{
         height: 50vh;
         display: flex;
         align-items: center;
+        margin-top: 30px;
     }
     #dream-div2{
         background-position: center top;
         height: 50vh;
         display: flex;
         align-items: center;
+        margin-top: 30px;
     }
     #dream-div3{
         height: 50vh;
         display: flex;
         align-items: center;
+        margin-top: 30px;
     }
     .caption{
         width: 100%;
@@ -806,18 +874,19 @@ body{
         color: white;
     }
     .cap-property{
-        width: 85%;
+        width: 90%;
         margin: 0 auto;
     }
     .sm-head{
-        margin-bottom: 10px;
-        font-size: 15px;
+        margin-bottom: 7px;
+        font-size: 10px;
     }
     .dream-head{
-        font-size: 30px;
+        font-size: 20px;
     }
     .head-desc{
-        font-size: 14px;
+        font-size: 12px;
+        line-height: 1.5;
     }
     .head-desc br{
         display: none;
@@ -948,7 +1017,7 @@ body{
         gap: 30px;
     }
 }
-@media only screen and (min-width: 576px) and (max-width: 992px) {
+@media only screen and (min-width: 577px) and (max-width: 992px) {
     #navbar1{
         display: none;
     }
@@ -979,33 +1048,36 @@ body{
       #phone-display ul {
         float: right;
         margin-right: 0px;
+        padding: 20px;
     }
       #phone-display ul li{
         display: block;
-        /* margin: 25px 0; */
-        padding: 15px 0;
-        border-bottom: 1px solid rgb(55, 55, 55);
-        width: 80%;
-        line-height: 30px;
+        /* padding: 15px 0; */
+        /* width: 100%; */
+        /* line-height: 30px; */
+      }
+   
+      .mobile-dropdown{
+        flex-direction: row;
       }
       #phone-display ul li a{
-        font-size: 16px;
+        font-size: 12px;
         font-weight: 500;
-
+        text-decoration: none;
       }
       a:hover,a.active{
-        color: var(--primary-color);
+        color: #d54900;
       }
       #check:checked ~ ul{
         right: 0;
       }
 
-      /* header */
-      #head-sec:hover .swiper-button-next::after{
-        display: none;
+    /* header */
+    #head-sec:hover .swiper-button-next::after{
+        display: block;
     }
     #head-sec:hover .swiper-button-prev:after{
-        display: none;
+        display: block;
     }
     #dream-div{
         background-position: center top;
@@ -1025,7 +1097,7 @@ body{
         align-items: center;
     }
     .caption{
-        width: 100%;
+        width: 70%;
         margin-right: 0;
         color: white;
     }
@@ -1038,20 +1110,18 @@ body{
         font-size: 15px;
     }
     .dream-head{
-        font-size: 30px;
+        font-size: 35px;
     }
     .head-desc{
         font-size: 14px;
     }
     .head-desc br{
-        display: none;
+        display: block;
     }
     .dream-btn-1{
-        padding: 10px 30px;
+        padding: 15px 40px;
         margin-top: 20px;
-        border: none;
-        background-color: #d54900;
-        font-size: 12px;
+        font-size: 14px;
         display: inline;
     }
     /* .dream-btn-1:hover{
@@ -1059,14 +1129,9 @@ body{
         cursor: pointer; 
     } */
     .dream-btn-2{
-        padding: 10px 30px;
+        padding: 15px 40px;
         margin-left: 20px; 
-        border: 1px solid white;
-        font-size: 12px;
-        font-weight: 400;
-        color: white;
-        border-radius: 5px;
-        background-color: transparent;
+        font-size: 14px;
     }
     #quote-sec{
         height: 100%;
@@ -1074,13 +1139,13 @@ body{
     }
     #quote{
         width: 100%;
-        display: block;
+        display: flex;
     }
     #quote-head{
         font-size: 20px;
     }
     #quote-btn{
-        padding: 15px 25px;
+        padding: 20px 45px;
         font-size: 14px;
     }
 
@@ -1088,36 +1153,43 @@ body{
     #services{
         width: 95%;
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
     }
     .service-card{
         width: 100%;
         margin-bottom: 20px;
     }
-
     .card-img img{
-        width: 100%;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
     }
+    .card-img #img-3{
+    width: 90%;
+    }
+
 
     #what-we-offer{
         width: 95%;
-        display: block;
+        display: flex;
     }
     #offer-tab{
-        width: 100%;
+        width: 70%;
     }
     #consulting{
-        width: 100%;
+        width: 30%;
         margin-top: 20px;
     }
     .content{
-        display: block;
+        display: flex;
+        gap: 20px;
       }
       .content .list{
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(1,1fr);
         position: relative;
-        width: 90%;
+        width: 30%;
         margin-right: 0px;
         margin-bottom: 40px;
       }
@@ -1138,7 +1210,7 @@ body{
         width: 95%;
     }
     #trust-head{
-        width: 90%;
+        width: 60%;
         border-bottom: 1px solid rgb(229, 229, 229);
         margin: 0 auto;
         padding-bottom: 20px;
@@ -1150,11 +1222,12 @@ body{
         text-align: center;
     }
     #clients-co{
-        display: block;
+        display: flex;
         text-align: center;
+        align-items: center;
         border-top: 1px solid rgb(229, 229, 229);
         border-bottom: 1px solid rgb(229, 229, 229);
-        padding: 30px;
+        padding: 20px;
         margin-bottom: 20px;
     }
     .co-img{
@@ -1168,7 +1241,7 @@ body{
     #first-footer{
         width: 95%;
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 30px;
     }
 }
