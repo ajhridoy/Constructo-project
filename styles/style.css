@@ -395,6 +395,7 @@ body{
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     justify-content: space-between;
     max-width: 1230px;
     margin: 0 auto;
